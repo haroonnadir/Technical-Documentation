@@ -1,0 +1,179 @@
+<!DOCTYPE html> <!-- Declares this is an HTML5 document -->
+<html lang="en"> <!-- Opens the HTML document with English language -->
+<head>
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes it responsive on all devices -->
+  <title>Coding Tech Club - Technical Documentation</title> <!-- Title shown in browser tab -->
+
+  <!-- CSS starts here -->
+  <style>
+    * {
+      margin: 0;              /* Removes default margin */
+      padding: 0;             /* Removes default padding */
+      box-sizing: border-box; /* Makes width/height include padding and borders */
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif; /* Sets default font for the page */
+      display: flex;                       /* Enables Flexbox layout */
+      min-height: 100vh;                   /* Makes sure body takes full height of the screen */
+      background-color: #f4f4f9;           /* Sets light background color */
+    }
+
+    /* Sidebar styling */
+    nav {
+      width: 260px;                       /* Sidebar width */
+      background-color: #1e1e2f;          /* Dark background */
+      color: #fff;                        /* Text color: white */
+      padding: 25px;                      /* Inner spacing */
+      position: sticky;                   /* Keeps nav fixed while scrolling */
+      top: 0;                             /* Sticks to top of the screen */
+      height: 100vh;                      /* Full height */
+      overflow-y: auto;                   /* Allows scrolling if content is tall */
+    }
+
+    nav h2 {
+      font-size: 22px;                    /* Font size for nav heading */
+      margin-bottom: 25px;                /* Space below heading */
+      border-bottom: 2px solid #444;      /* Underline effect */
+      padding-bottom: 10px;               /* Space under heading text */
+    }
+
+    nav a {
+      display: block;                     /* Puts each link on a new line */
+      color: #ddd;                        /* Light gray color */
+      margin: 12px 0;                     /* Spacing above and below */
+      text-decoration: none;              /* Removes underline */
+      padding: 8px;                       /* Click area padding */
+      border-radius: 4px;                 /* Rounded corners on hover */
+      transition: background-color 0.2s ease, color 0.2s ease; /* Smooth hover effect */
+    }
+
+    nav a:hover {
+      background-color: #2d2d40;          /* Background color on hover */
+      color: #00bcd4;                     /* Text color on hover */
+    }
+
+    /* Main content area styling */
+    main {
+      flex: 1;                            /* Takes remaining space beside sidebar */
+      padding: 40px;                      /* Space around main content */
+      max-width: 1000px;                  /* Optional max width */
+      margin: auto;                       /* Center content */
+    }
+
+    main section {
+      margin-bottom: 60px;                /* Space between sections */
+    }
+
+    main h2 {
+      color: #222;                        /* Dark gray heading */
+      margin-bottom: 15px;                /* Space below heading */
+      font-size: 1.8rem;                  /* Size of section titles */
+      border-bottom: 2px solid #ccc;      /* Bottom border under heading */
+      padding-bottom: 8px;                /* Padding under heading */
+    }
+
+    main p {
+      line-height: 1.7;                   /* Line spacing */
+      color: #444;                        /* Paragraph text color */
+      font-size: 1rem;                    /* Paragraph font size */
+    }
+
+    pre {
+      background-color: #eee;             /* Light gray background for code block */
+      padding: 15px;                      /* Inner padding */
+      border-left: 5px solid #00bcd4;     /* Colored line on left */
+      overflow-x: auto;                   /* Allows horizontal scroll if needed */
+      margin-top: 15px;                   /* Space above code block */
+    }
+
+    code {
+      font-family: "Courier New", monospace; /* Monospace font for code */
+      color: #333;                          /* Dark text */
+    }
+
+    /* Mobile & Tablet Responsive Styling */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;            /* Stack sidebar above main content */
+      }
+
+      nav {
+        width: 100%;                       /* Full width on small screen */
+        height: auto;                      /* Auto height */
+        position: relative;                /* Removes sticky behavior */
+      }
+
+      main {
+        padding: 20px;                     /* Smaller padding for small screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar navigation menu -->
+  <nav>
+    <h2>Documentation Menu</h2> <!-- Sidebar heading -->
+    <a href="#intro">Introduction</a>
+    <a href="#setup">Getting Started</a>
+    <a href="#syntax">Syntax Overview</a>
+    <a href="#examples">Code Examples</a>
+    <a href="#tips">Best Practices</a>
+  </nav>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Section 1 -->
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the Coding Tech Club technical documentation. This guide helps you understand core web development concepts with structured examples and best practices.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="setup">
+      <h2>Getting Started</h2>
+      <p>
+        Make sure you have a modern web browser (like Chrome or Firefox) and a code editor such as VS Code. Basic knowledge of HTML and CSS will help you follow along smoothly.
+      </p>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="syntax">
+      <h2>Syntax Overview</h2>
+      <p>
+        HTML defines the structure of your web pages using semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>. CSS handles the visual style such as layout, colors, and fonts.
+      </p>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="examples">
+      <h2>Code Examples</h2>
+      <p>Here’s a basic example of a valid HTML document structure:</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Documentation&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to Coding Tech Club&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="tips">
+      <h2>Best Practices</h2>
+      <p>
+        Keep your code modular and organized. Use external CSS files for cleaner separation of concerns. Add comments for clarity, use semantic tags, and test responsiveness across devices. DRY = Don’t Repeat Yourself.
+      </p>
+    </section>
+
+  </main>
+</body>
+</html>
