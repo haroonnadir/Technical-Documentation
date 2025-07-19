@@ -1,1 +1,1 @@
-sapmle of Technical-Documentation
+Technical-Documentation
